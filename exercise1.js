@@ -10,8 +10,10 @@ function Start () {
 		cofObj.name = names[i];
 		cofText = cofObj.transform.Find('labelCanvas').Find('labelText').GetComponent.<UI.Text>();
 		cofText.text = names[i];
-		cofObj.transform.Find('object').transform.localScale.y += (i * .1);
-		cofObj.transform.Find('object').rotation = new Quaternion.Euler(-90,0,0);
+		cofObj.transform.Find('object').transform.localScale.z += (i * .1);
+		
+		cofObj.transform.Find('object').transform.localPosition.z -= (i * .1);
+		//cofObj.transform.Find('object').rotation = new Quaternion.Euler(-90,0,0);
 		coffees[i] = cofObj; 
 		cofObj = null; 
 	}
