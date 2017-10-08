@@ -14,7 +14,7 @@
 		A82414BB1F896C030075B5F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A82414B91F896C030075B5F8 /* LaunchScreen.storyboard */; };
 		A82414C61F896C030075B5F8 /* new_languageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82414C51F896C030075B5F8 /* new_languageTests.swift */; };
 		A82414D11F896C030075B5F8 /* new_languageUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82414D01F896C030075B5F8 /* new_languageUITests.swift */; };
-		A82414DF1F896E0E0075B5F8 /* ship.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82414DE1F896E0E0075B5F8 /* ship.swift */; };
+		A82414DF1F896E0E0075B5F8 /* ship_work.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82414DE1F896E0E0075B5F8 /* ship_work.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,8 @@
 		A82414CC1F896C030075B5F8 /* new_languageUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = new_languageUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82414D01F896C030075B5F8 /* new_languageUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = new_languageUITests.swift; sourceTree = "<group>"; };
 		A82414D21F896C030075B5F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A82414DE1F896E0E0075B5F8 /* ship.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ship.swift; sourceTree = "<group>"; };
-		A82414E01F896E960075B5F8 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		A82414DE1F896E0E0075B5F8 /* ship_work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ship_work.swift; sourceTree = "<group>"; };
+		A859B65F1F89860B00DEBA19 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +102,8 @@
 			children = (
 				A82414B01F896C030075B5F8 /* AppDelegate.swift */,
 				A82414B21F896C030075B5F8 /* ViewController.swift */,
-				A82414E01F896E960075B5F8 /* art.scnassets */,
-				A82414DE1F896E0E0075B5F8 /* ship.swift */,
+				A859B65F1F89860B00DEBA19 /* art.scnassets */,
+				A82414DE1F896E0E0075B5F8 /* ship_work.swift */,
 				A82414B41F896C030075B5F8 /* Main.storyboard */,
 				A82414B71F896C030075B5F8 /* Assets.xcassets */,
 				A82414B91F896C030075B5F8 /* LaunchScreen.storyboard */,
@@ -264,7 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A82414DF1F896E0E0075B5F8 /* ship.swift in Sources */,
+				A82414DF1F896E0E0075B5F8 /* ship_work.swift in Sources */,
 				A82414B31F896C030075B5F8 /* ViewController.swift in Sources */,
 				A82414B11F896C030075B5F8 /* AppDelegate.swift in Sources */,
 			);
@@ -435,8 +435,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HKN292LU8;
 				INFOPLIST_FILE = new_language/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yunyu.flash-card";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunyu.newlanguage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,8 +451,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5HKN292LU8;
 				INFOPLIST_FILE = new_language/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yunyu.flash-card";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yunyu.newlanguage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

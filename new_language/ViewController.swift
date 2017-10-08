@@ -7,21 +7,26 @@
 //
 
 import UIKit
-import SceneKit
 import ARKit
+import SceneKit
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, ARSCNViewDelegate {
+    
+    
     @IBOutlet weak var sceneView: ARSCNView!
     
-    @IBOutlet weak var vocab: UITextField!
     
     override func viewDidLoad() {
+       
         super.viewDidLoad()
+        sceneView.delegate = self
         
+        sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene()
+        let scene = SCNScene(named: "art.scnassets/ship.scn")
+        
         
         // Set the scene to the view
         sceneView.scene = scene
@@ -35,42 +40,41 @@ class ViewController: UIViewController {
         
         // Run the view's session
         sceneView.session.run(configuration)
+        
         addObject()
     }
     
-    func addObject(){
-        let spaceship = ship()
-        spaceship.loadModal()
-        let xPos = randomPostion(lowerBound: -1.5, upperBound: 1.5)
-        let yPos = randomPostion(lowerBound: -1.5, upperBound: 1.5)
+    func addObject() {
+        let ship = ship_work()
+        ship.loadModal()
         
-        spaceship.position = SCNVector3(xPos, yPos, -1)
-        sceneView.scene.rootNode.addChildNode(spaceship)
-    }
-    
-    func randomPostion(lowerBound lower:Float, upperBound upper: Float) -> Float{return Float(arc4random())/Float(UInt32.max)*(lower-upper) + upper}
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+//        let xPos = randomPosition(lowerBound: -1.5, upperBound: 1.5)
+//        let yPos = randomPosition(lowerBound: -1.5, upperBound: 1.5)
         
-        // Pause the view's session
-        sceneView.session.pause()
+        ship.position = SCNVector3(1.5, 1.5, -1)
+        
+        sceneView.scene.rootNode.addChildNode(ship)
+        
     }
     
-    override func touchesEstimatedPropertiesUpdated(_ touches: Set<UITouch>) {
-        if let touch = touches.first{
-            let location = touch.location(in: sceneView)
-            let hitList = sceneView.hitTest(location, options: nil)
-            if let hitObject = hitList.first{
-                let node = hitObject.node
-                
-                if node.name == "space_ship"{
-                    node.removeFromParentNode()
-                    addObject()
-                }
-            }
-        }
-    }
+    func randomPosition(lowerBound lower:Float, upperBound upper: Float) -> Float{return Float(arc4random())/Float(UInt32.max)*(lower-upper) + upper}
+    
+   
+    
+//    override func touchesEstimatedPropertiesUpdated(_ touches: Set<UITouch>) {
+//        if let touch = touches.first{
+//            let location = touch.location(in: sceneView)
+//            let hitList = sceneView.hitTest(location, options: nil)
+//            if let hitObject = hitList.first{
+//                let node = hitObject.node
+//                
+//                if node.name == "space_ship"{
+//                    node.removeFromParentNode()
+//                    addObject()
+//                }
+//            }
+//        }
+//    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -87,21 +91,7 @@ class ViewController: UIViewController {
      return node
      }
      */
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
-    }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
-    }
+   
     
    
 }
