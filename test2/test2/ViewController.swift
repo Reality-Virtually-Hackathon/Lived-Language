@@ -11,7 +11,10 @@ import SceneKit
 import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
-
+    @IBAction func previous_page(_ sender: Any) {
+        performSegue(withIdentifier: "milk2mug", sender: self)
+    }
+    
     @IBAction func nextpage(_ sender: Any) {
     }
     @IBOutlet weak var vocab: ARSCNView!
@@ -27,7 +30,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene(named: "art.scnassets/LowPolyPitcher.scn")!
         
         // Set the scene to the view
         sceneView.scene = scene
