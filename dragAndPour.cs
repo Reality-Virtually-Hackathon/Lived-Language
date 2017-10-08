@@ -38,7 +38,7 @@ public class dragAndPour : MonoBehaviour
         }
         gameObject.GetComponent<AudioSource>().PlayOneShot(Resources.Load("sfx_"+gameObject.name) as AudioClip);
 
-        transform.position += new Vector3(0, 1.5f, 0);
+        transform.position += new Vector3(0, 1.75f, 0);
 
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
@@ -46,7 +46,7 @@ public class dragAndPour : MonoBehaviour
 
     private void OnMouseUp()
     {
-        transform.position += new Vector3(0, -1.5f, 0); 
+        transform.position += new Vector3(0, -1.75f, 0); 
     }
 
     void OnMouseDrag()
@@ -65,11 +65,11 @@ public class dragAndPour : MonoBehaviour
             {
                 if (transform.position.x < other.transform.position.x)
                 {
-                    this.gameObject.transform.Rotate(0, 0, -10);
+                    this.gameObject.transform.Rotate(0, 0, -30);
                 }
                 else
                 {
-                    this.gameObject.transform.Rotate(0, 0, 10);
+                    this.gameObject.transform.Rotate(0, 0, 30);
                 }
             }
         }
@@ -81,13 +81,20 @@ public class dragAndPour : MonoBehaviour
         {
             if (isCorrect)
             {
+                var materials = other.GetComponentInChildren<MeshRenderer>().materials;
+                print(materials.Length);
+                /*Color startColor = materials[0].color;
+                Color newColor = new Color(0x8A, 0x5F, 0x45, 0xFF);
+                Material mat = new Material(Shader.Find("Specular"));
+                mat.color = Color.Lerp(startColor, newColor, Time.deltaTime);*/
+
                 if (transform.position.x < other.transform.position.x)
                 {
-                    this.gameObject.transform.Rotate(0, 0, 10);
+                    this.gameObject.transform.Rotate(0, 0, 30);
                 }
                 else
                 {
-                    this.gameObject.transform.Rotate(0, 0, -10);
+                    this.gameObject.transform.Rotate(0, 0, -30);
                 }
             }
         }
