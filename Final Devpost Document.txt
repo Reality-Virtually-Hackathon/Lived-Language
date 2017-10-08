@@ -1,0 +1,29 @@
+Team Lead: Thomas Kauer
+
+Team Name: Live Language
+
+Team Lead's Mobile Number: 520-499-8145
+
+Location:  5th Floor, next to room 514B (in front in big area), and table 36
+
+Environment: Unity
+
+Patform-- Unity, Xcode, iOS
+
+Development Tools--ARKit, SceneKit
+
+SDKs--ARKit, Scenekit
+
+Assets-- We developed all of the assets ourselves, although we tested with free beta assets that we deleted later. Assets include, coffee cup, honey, cream, landscape, tree, house bench (see uploads)
+
+Libraries--ARKit
+
+Any components not created at the Hackathon?
+
+No, see above.
+
+A link to a video
+
+All projects should be subitted to the hackathon Github account (TBA) before judging begins.
+
+All project submitted will be subject to a code-review
