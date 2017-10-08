@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arHackathon.Plugins", "arHackathon.Plugins.csproj", "{3CD9017F-56CA-78EA-FDCA-3A342BEDF571}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arHackathon", "arHackathon.csproj", "{50D3E534-B2EA-73CD-F0BA-0AF5F3D992E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "arHackathon.Editor", "arHackathon.Editor.csproj", "{73B65B0E-FE25-B9C0-B6B3-FB95DCDF4FB9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CD9017F-56CA-78EA-FDCA-3A342BEDF571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CD9017F-56CA-78EA-FDCA-3A342BEDF571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CD9017F-56CA-78EA-FDCA-3A342BEDF571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CD9017F-56CA-78EA-FDCA-3A342BEDF571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50D3E534-B2EA-73CD-F0BA-0AF5F3D992E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50D3E534-B2EA-73CD-F0BA-0AF5F3D992E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50D3E534-B2EA-73CD-F0BA-0AF5F3D992E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50D3E534-B2EA-73CD-F0BA-0AF5F3D992E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73B65B0E-FE25-B9C0-B6B3-FB95DCDF4FB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73B65B0E-FE25-B9C0-B6B3-FB95DCDF4FB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73B65B0E-FE25-B9C0-B6B3-FB95DCDF4FB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73B65B0E-FE25-B9C0-B6B3-FB95DCDF4FB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
