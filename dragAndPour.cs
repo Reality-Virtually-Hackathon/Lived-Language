@@ -38,10 +38,15 @@ public class dragAndPour : MonoBehaviour
         }
         gameObject.GetComponent<AudioSource>().PlayOneShot(Resources.Load("sfx_"+gameObject.name) as AudioClip);
 
-
+        transform.position += new Vector3(0, 1.5f, 0);
 
         screenPoint = Camera.main.WorldToScreenPoint(gameObject.transform.position);
         offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
+    }
+
+    private void OnMouseUp()
+    {
+        transform.position += new Vector3(0, -1.5f, 0); 
     }
 
     void OnMouseDrag()
@@ -49,7 +54,7 @@ public class dragAndPour : MonoBehaviour
         Vector3 cursorPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
         Vector3 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
         transform.position = cursorPosition;
-      //  transform.position.y = 1;
+    
     }
 
     void OnTriggerEnter(Collider other)

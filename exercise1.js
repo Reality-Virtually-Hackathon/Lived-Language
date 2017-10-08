@@ -11,7 +11,7 @@ function Start () {
 		cofText = cofObj.transform.Find('labelCanvas').Find('labelText').GetComponent.<UI.Text>();
 		cofText.text = names[i];
 		cofObj.transform.Find('object').transform.localScale.y += (i * .1);
-		//cofObj.transform.Find('object').transform.localPosition.y += (cofObj.transform.Find('object').transform.localScale.y/-2);
+		cofObj.transform.Find('object').rotation = new Quaternion.Euler(-90,0,0);
 		coffees[i] = cofObj; 
 		cofObj = null; 
 	}
